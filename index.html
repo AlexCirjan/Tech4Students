@@ -1,4 +1,5 @@
-<html>
+< html>
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,13 +84,19 @@
       <a href="#servizi">Servizi</a>
       <a href="#contatti">Contatti</a>
     </nav>
-  </header>  <section id="home">
+  </header>
+
+  <section id="home">
     <h2>Benvenuto!</h2>
     <p>Offriamo soluzioni rapide per le tue esigenze tecnologiche. Scegli il servizio che fa per te.</p>
-  </section>  <section id="chi-siamo">
+  </section>
+
+  <section id="chi-siamo">
     <h2>Chi siamo</h2>
-    <p>Siamo specialisti IT pronti a risolvere i tuoi problemi hardware e a offrirti consulenze gratuite su misura. Con anni di esperienza, siamo il punto di riferimento per l’assistenza tecnologica.</p>
-  </section>  <section id="servizi">
+    <p>Siamo specialisti IT pronti a risolvere i tuoi problemi hardware e a offrirti consulenze gratuite su misura. Con pochi anni di esperienza, cherchiamo di migliorare insieme a voi.</p>
+  </section>
+
+  <section id="servizi">
     <h2>Servizi</h2>
     <div class="servizio">
       <h3>Consulenza gratuita</h3>
@@ -99,21 +106,24 @@
       <h3>Intervento Hardware</h3>
       <p>Interveniamo sul tuo dispositivo con riparazioni e aggiornamenti professionali.</p>
     </div>
+
     <h3>Inizia una conversazione</h3>
-    <form onsubmit="handleSubmit(event)">
+    <form action="https://formspree.io/f/mnqepdoe" method="POST">
       <label for="servizio">Seleziona il servizio:</label>
-      <select id="servizio" required>
+      <select id="servizio" name="servizio" required>
         <option value="">-- Scegli --</option>
         <option value="consulenza">Consulenza gratuita</option>
         <option value="intervento">Intervento hardware</option>
-      </select><label for="messaggio">Scrivi la tua problematica:</label>
-  <textarea id="messaggio" rows="5" required></textarea>
+      </select>
 
-  <button type="submit">Invia richiesta</button>
-</form>
-<div id="chatbox" style="margin-top: 20px; padding: 10px; background: #111; display:none;"></div>
+      <label for="messaggio">Scrivi la tua problematica:</label>
+      <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
 
-  </section>  <section id="contatti">
+      <button type="submit">Invia richiesta</button>
+    </form>
+  </section>
+
+  <section id="contatti">
     <h2>Contatti</h2>
     <p>Email: <a href="mailto:tech4studentssuzzara@gmail.com" style="color:#00ffff">tech4studentssuzzara@gmail.com</a></p>
     <p>Telefono: <a href="tel:" style="color:#00ffff"></a></p>
@@ -124,16 +134,10 @@
       <textarea name="messaggio" placeholder="Il tuo messaggio" rows="5" required></textarea>
       <button type="submit">Invia</button>
     </form>
-  </section>  <footer>
+  </section>
+
+  <footer>
     <p>&copy; 2025 Servizi Tecnologici. Tutti i diritti riservati.</p>
-  </footer>  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      const servizio = document.getElementById('servizio').value;
-      const messaggio = document.getElementById('messaggio').value;
-      const chat = document.getElementById('chatbox');
-      chat.style.display = 'block';
-      chat.innerHTML = <strong>Hai richiesto: ${servizio}</strong><br><em>${messaggio}</em><br><br><strong>Risposta:</strong> Grazie per il tuo messaggio! Ti contatteremo al più presto.;
-    }
-  </script></body>
+  </footer>
+</body>
 </html>
